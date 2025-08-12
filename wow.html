@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora Makeup Studio — Professional Makeup & Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Aurora Makeup Studio — Bridal, Editorial, HD Airbrush, and On-location makeup services. Elegant, professional, boutique experience." />
+  <style>
+    :root{
+      --bg:#FAF9F7;
+      --card:#FFFFFF;
+      --muted:#7b7b7b;
+      --accent:#b77b6a; /* warm rose gold */
+      --accent-2:#2b2b2b;
+      --maxw:1100px;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:var(--accent-2); -webkit-font-smoothing:antialiased;}
+    .container{max-width:var(--maxw); margin:0 auto; padding:36px;}
+
+    /* Header */
+    header{display:flex; align-items:center; justify-content:space-between; gap:20px;}
+    .brand{display:flex; align-items:center; gap:14px; text-decoration:none; color:inherit}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fff 0%, #f6efec 100%); display:flex;align-items:center;justify-content:center;font-family:'Playfair Display'; font-size:20px; box-shadow:0 6px 20px rgba(43,43,43,0.06);}
+    .brand h1{font-family:'Playfair Display';font-size:18px;margin:0}
+    nav{display:flex; gap:20px; align-items:center}
+    nav a{color:var(--muted); text-decoration:none; font-weight:600}
+    .cta{background:var(--accent); color:white; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 460px; gap:40px; align-items:center; margin-top:36px}
+    .hero-left h2{font-family:'Playfair Display'; font-size:44px; margin:0 0 12px}
+    .hero-left p{color:var(--muted); line-height:1.6; margin:0 0 22px}
+    .hero-actions{display:flex; gap:12px}
+    .btn-outline{padding:12px 18px;border-radius:12px;border:1px solid rgba(43,43,43,0.08); text-decoration:none; color:var(--accent-2); font-weight:600}
+    .card{background:var(--card); border-radius:var(--radius); padding:22px; box-shadow:0 6px 30px rgba(43,43,43,0.06)}
+
+    .studio-features{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .feature{background:linear-gradient(180deg, rgba(183,123,106,0.06), rgba(183,123,106,0.02)); padding:10px 12px; border-radius:10px; font-weight:600; color:var(--accent-2);}
+
+    /* Services */
+    .services{margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+    .service{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(43,43,43,0.04);}
+    .service h3{margin:0 0 8px; font-family:'Playfair Display'; font-size:18px}
+    .service p{margin:0;color:var(--muted);line-height:1.5}
+    .service .price{margin-top:12px;font-weight:700;color:var(--accent)}
+
+    /* Gallery + Testimonials */
+    .gallery{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:30px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+
+    .testimonials{margin-top:30px; display:flex; gap:16px; align-items:center}
+    .testimonial{background:var(--glass); padding:18px; border-radius:12px; backdrop-filter: blur(6px);}
+
+    /* Contact */
+    .contact{display:grid; grid-template-columns:1fr 420px; gap:30px; margin-top:42px; align-items:start}
+    form{background:var(--card); padding:22px; border-radius:12px; box-shadow:0 6px 24px rgba(43,43,43,0.05)}
+    label{display:block;margin-bottom:8px;font-weight:600}
+    input, textarea{width:100%; padding:12px;border-radius:8px;border:1px solid rgba(43,43,43,0.08); margin-bottom:12px}
+    button[type=submit]{background:var(--accent); color:#fff; padding:12px 16px; border-radius:10px; border:0; font-weight:700}
+
+    footer{margin-top:48px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .contact{grid-template-columns:1fr}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      nav{display:none}
+    }
+    @media (max-width:560px){
+      .services{grid-template-columns:1fr}
+      .gallery img{height:160px}
+      .logo{width:48px;height:48px}
+      .hero-left h2{font-size:32px}
+    }
+
+    /* Small utilities */
+    .muted{color:var(--muted)}
+    .lead{font-size:15px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">A</div>
+        <div>
+          <h1>Aurora Makeup Studio</h1>
+          <div class="muted" style="font-size:12px">Refined beauty — effortless glamour</div>
+        </div>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a class="cta" href="#contact">Book Now</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Elegance. Precision. You, elevated.</h2>
+        <p class="lead">Aurora Makeup Studio provides professional makeup services for weddings, editorials, events and personal coaching — using high-quality products and techniques tailored to your skin, style and photography needs.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#contact">Book a consultation</a>
+          <a class="btn-outline" href="#services">View services</a>
+        </div>
+
+        <div class="studio-features" aria-hidden>
+          <div class="feature">Bridal Specialists</div>
+          <div class="feature">HD Airbrush</div>
+          <div class="feature">On-location</div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3 style="margin-top:0;">Studio at a glance</h3>
+        <p class="muted">A boutique studio in the city center offering private trials, professional photography-ready makeup, and beauty lessons in a calm, sanitized environment.</p>
+        <hr style="margin:14px 0;border:none;border-top:1px solid rgba(43,43,43,0.06)">
+        <ul style="margin:0;padding:0;list-style:none">
+          <li style="padding:8px 0"><strong>Duration:</strong> 60–120 mins per session</li>
+          <li style="padding:8px 0"><strong>Products:</strong> Cruelty-free, professional brands</li>
+          <li style="padding:8px 0"><strong>Team:</strong> Certified makeup artists</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="services" class="services">
+      <!-- Service definitions -->
+      <article class="service">
+        <h3>Bridal Makeup</h3>
+        <p>Full bridal makeup including consultation, trial, wedding-day application and touch-up kit. Our artists create a long-wear, photograph-ready look tailored to your culture and gown.</p>
+        <div class="price">From $220 — Wedding packages available</div>
+      </article>
+
+      <article class="service">
+        <h3>HD Airbrush & Photography Makeup</h3>
+        <p>High-definition airbrush foundation and finishing for camera-ready results. Ideal for photoshoots, film, and high-resolution portraits to ensure flawless skin under lights.</p>
+        <div class="price">From $150</div>
+      </article>
+
+      <article class="service">
+        <h3>Event & Evening Glam</h3>
+        <p>Glamour looks for parties, galas and red-carpet events — from soft classic glam to bold editorial statements. Includes lashes and custom color blending.</p>
+        <div class="price">From $95</div>
+      </article>
+
+      <article class="service">
+        <h3>Bridal Trial & Touch-ups</h3>
+        <p>Schedule a full trial before your big day to finalize your bridal look and timeline. On-day touch-ups and travel to venue are available.</p>
+        <div class="price">Trial $120</div>
+      </article>
+
+      <article class="service">
+        <h3>Makeup Lessons & Consultations</h3>
+        <p>One-on-one lessons to teach daily routines, contouring, and color matching. Great for bridesmaids or clients wanting to build confidence with makeup.</p>
+        <div class="price">From $80 / hour</div>
+      </article>
+
+      <article class="service">
+        <h3>On-location & Group Services</h3>
+        <p>We travel to venues for bridal parties and corporate events. Packages for groups available with multiple artists and timed schedules.</p>
+        <div class="price">Custom pricing</div>
+      </article>
+    </section>
+
+    <section id="gallery">
+      <h2 style="font-family:'Playfair Display'; margin-top:36px">Gallery</h2>
+      <p class="muted">Selected work — studio and on-location.</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Bridal makeup example">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Editorial makeup example">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Glam makeup example">
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2 style="font-family:'Playfair Display'; margin-top:36px">What clients say</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <strong>"Magical touch — I felt beautiful all day."</strong>
+          <div class="muted" style="margin-top:8px">— Saba R., Bride</div>
+        </div>
+        <div class="testimonial">
+          <strong>"Perfect for my shoot — skin looked flawless on camera."</strong>
+          <div class="muted" style="margin-top:8px">— Omar K., Photographer</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <h2 style="font-family:'Playfair Display'">Book a consultation</h2>
+        <p class="muted">Tell us about your event and we'll recommend the best package and timing.</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.');" aria-label="Booking form">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required placeholder="Jane Doe">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@email.com">
+
+          <label for="service">Service of interest</label>
+          <input id="service" name="service" placeholder="e.g. Bridal, Editorial, Lesson">
+
+          <label for="message">Message / Date / Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about the date, location and any inspiration images"></textarea>
+
+          <button type="submit">Request booking</button>
+        </form>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Studio details</h3>
+          <p class="muted">Address: 22 Rosewood Lane — City Center</p>
+          <p class="muted">Phone: +1 (555) 123-4567</p>
+          <p class="muted">Hours: Mon–Sat 10:00 — 19:00</p>
+          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(43,43,43,0.06)">
+          <p style="margin:0"><strong>COVID-19:</strong> We follow strict sanitation and PPE guidelines for all appointments.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Aurora Makeup Studio · All rights reserved</div>
+      <div class="muted">Designed with care · Privacy · Terms</div>
+    </footer>
+  </div>
+
+  <script>
+    // small enhancements
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
